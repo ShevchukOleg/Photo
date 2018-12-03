@@ -1,15 +1,18 @@
 //Change password UI
 const forgotPasswordForm = document.forms["changePassword"];
-const emailForResetInput = forgotPasswordForm.elements["email"];
+const emailForResetInput = forgotPasswordForm.elements["emailForReset"];
 const btn = form.querySelector("button[data-toggle]")
 
 forgotPasswordForm.addEventListener("submit", modifyPassword);
 
-
+/**
+ * modifyPassword - обаботчие ресета на форме сброса пароля
+ * @param {Event} e 
+ */
 function modifyPassword(e) {
   e.preventDefault();
   
-  btn.modal('toggle');
+  // btn.modal('toggle');
 
   const validation = new Validation(forgotPasswordForm);
   validation.init();
